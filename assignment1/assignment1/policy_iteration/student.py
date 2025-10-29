@@ -94,8 +94,84 @@ def value_iteration(env, env_size, end_state, directions, obstacles, gamma=0.99,
 
 def policy_iteration(env, env_size, end_state, directions, obstacles, gamma=0.99, max_iters=1000, theta=1e-3):
     # rename to policy
+
+    # 1. Initialization
     policy = np.random.randint(0, env.action_space.n, (env.observation_space.n))
+    values = np.zeros(env.observation_space.n)
+    STATES = np.zeros((env.observation_space.n, 2), dtype=np.uint8)
+    REWARDS = reward_probabilities(env_size)
+
+    # enumerate grid states in the same way
+    k = 0
+    for r in range(env_size):
+        for c in range(env_size):
+            STATES[k] = np.array([r, c], dtype=np.uint8)
+            k += 1
+
+
+    for i in range(max_iters):
+
+        # 2. Policy Evaluation
+        while True:
+            delta = 0
+            v_old = values.copy()
+            for s in range(env.observation_space.n):
+                state = STATES[s]
+
+                a = policy[s]
+                next_state_prob = transition_probabilities(env, state, a, env_size, directions, obstacles).flatten()
+
+                # terminal (goal) or obstacle cells have no outgoing value
+                done = (state == end_state).all() or obstacles[state[0], state[1]]
+
+                if done:
+                    values[s] = 0.0
+
+                else:
+                    values[s] = (next_state_prob * (REWARDS + gamma * v_old)).sum()
+
+
+                delta = max(delta, np.abs(v_old[s] - values[s]))
+
+            if delta < theta:
+                break
+
+        
+        # 3. Policy Improvement
+        policy_stable = True
+
+        for s in range(env.observation_space.n):
+
+            state = STATES[s]
+
+            # terminal (goal) or obstacle cells have no outgoing value
+            done = (state == end_state).all() or obstacles[state[0], state[1]]
     
-    # policy = ...
+            if done:
+                # do not change the policy for terminal states
+                continue
+
+            b = policy[s]
+
+            best_value = -float('inf')
+            best_action = None
+
+            for a in range(env.action_space.n):
+
+                next_state_prob = transition_probabilities(env, state, a, env_size, directions, obstacles).flatten()
+
+                va = (next_state_prob * (REWARDS + gamma * values)).sum()
+
+                if va > best_value:
+                    best_value = va
+                    best_action = a
+            
+            policy[s] = best_action
+
+            if best_action != b:
+                policy_stable = False
+            
+        if policy_stable:
+            break
 
     return policy.reshape((env_size, env_size)), values.reshape((env_size, env_size))
