@@ -1,0 +1,4 @@
+gymnasium==0.29.1
+gymnasium[toy_text]
+numpy==1.24.4
+tqdm==4.66.5
