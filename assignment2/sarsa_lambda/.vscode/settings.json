@@ -1,0 +1,11 @@
+{
+    // 1. Disable "Ghost Text" (Gray full-line suggestions)
+    // This stops AI tools like Copilot from suggesting lines
+    "editor.inlineSuggest.enabled": false,
+
+    // 2. Specific GitHub Copilot Disable (if you use it)
+    "github.copilot.editor.enableAutoCompletions": false,
+
+    // Optional: Disable suggestion on trigger characters (like typing '.')
+    "editor.suggestOnTriggerCharacters": false
+}
