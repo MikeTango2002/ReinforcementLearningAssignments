@@ -8,6 +8,7 @@ import sklearn
 import sklearn.pipeline
 import sklearn.preprocessing
 from sklearn.kernel_approximation import RBFSampler
+from sklearn.preprocessing import StandardScaler
 import pickle
 
 
@@ -26,18 +27,40 @@ class RBFFeatureEncoder:
     def __init__(self, env): # modify
         self.env = env
         # TODO init rbf encoder
-        # n_components is the number of features to generate
-        self.rbf_sampler = RBFSampler(n_components=150, gamma=1.5, random_state=1)
-
+        
         # Fit the RBF sampler to some sample data from the environment
         # MountainCar state has 2 dimensions (position, velocity)
-        observation_examples = np.array([env.observation_space.sample() for _ in range(100)])
-
         # Samples random projection according to n_features.
         # It needs as input some data to compute the mean and variance of each feature.
         # The shape of the input should be (n_samples, n_features)
         # Each sample has shape (2,) for MountainCar, and np.array(list_of_arrays) automatically stacks them correctly
-        self.rbf_sampler.fit(observation_examples)
+        observation_examples = np.array([env.observation_space.sample() for i in range(2000)])
+
+        self.scaler = StandardScaler()
+
+        self.scaler.fit(observation_examples)
+
+        scaled_examples = self.scaler.transform(observation_examples)
+
+        ## OLD APPROACH ##
+        ##################
+        # n_components is the number of features to generate
+        #self.rbf_sampler = RBFSampler(n_components=300, gamma=0.9, random_state=1)
+        #self.rbf_sampler.fit(scaled_examples)
+        ##################
+
+        self.samplers = []
+        gammas = [0.2, 0.5, 1.0, 2.0] 
+        n_components_per_gamma = 50
+        
+        for g in gammas:
+            sampler = RBFSampler(n_components=n_components_per_gamma, gamma=g, random_state=1)
+            sampler.fit(scaled_examples)
+            self.samplers.append(sampler)
+
+        self._size = len(gammas) * n_components_per_gamma
+
+        
 
     def encode(self, state): # modify
         # TODO use the rbf encoder to return the features
@@ -49,23 +72,28 @@ class RBFFeatureEncoder:
         # Since the observation space in MountainCar is composed of ndarrays of shape (2,), we need to reshape the state to a 2D array with shape (1, 2)
         state_2d = np.array(state).reshape(1, -1) 
 
-        # The shape of rbf_features is (1, n_components)
-        rbf_features = self.rbf_sampler.transform(state_2d)
+        scaled_state = self.scaler.transform(state_2d)
 
-        return rbf_features
+        # Transform using all samplers and concatenate
+        features_list = [sampler.transform(scaled_state) for sampler in self.samplers]
+
+        # Concatenate along axis 1 (columns) and flatten
+        combined_features = np.concatenate(features_list, axis=1)
+        
+        return combined_features.flatten()
 
     @property
     def size(self): # modify
         # TODO return the number of features
-        return self.rbf_sampler.n_components
+        return self._size 
 
 class TDLambda_LVFA:
-    def __init__(self, env, feature_encoder_cls=RBFFeatureEncoder, alpha=0.01, alpha_decay=1, 
-                 gamma=0.9999, epsilon=0.3, epsilon_decay=0.995, final_epsilon=0.2, lambda_=0.9): # modify if you want (e.g. for forward view)
+    def __init__(self, env, feature_encoder_cls=RBFFeatureEncoder, alpha=0.01, alpha_decay=0.999, 
+                 gamma=0.9999, epsilon=0.2, epsilon_decay=0.9, final_epsilon=0.01, lambda_=0.9): # modify if you want (e.g. for forward view)
         self.env = env
         self.feature_encoder = feature_encoder_cls(env)
         self.shape = (self.env.action_space.n, self.feature_encoder.size)
-        self.weights = np.random.random(self.shape)
+        self.weights = np.zeros(self.shape) #np.random.random(self.shape)
         self.traces = np.zeros(self.shape)
         self.alpha = alpha
         self.alpha_decay = alpha_decay
@@ -82,18 +110,29 @@ class TDLambda_LVFA:
     def update_transition(self, s, action, s_prime, reward, done): # modify
         s_feats = self.feature_encoder.encode(s)
         s_prime_feats = self.feature_encoder.encode(s_prime)
+
         # TODO update the weights
+
+        #print(self.traces[action].shape)
+        #print(s_feats.shape)
+
 
         next_q_values = self.Q(s_prime_feats)
         current_q = self.Q(s_feats)[action]
 
+        # Calculate TD Error
         # Q-Learning Delta (TD Target - Current Q)
-        delta = reward + self.gamma * np.max(next_q_values) * (1 - done) - current_q
-        self.traces *= self.gamma * self.lambda_
-        self.traces[action] += s_feats
+        target = reward + self.gamma * np.max(next_q_values) * (1 - done)
+        delta = target - current_q
 
-        # Update the weights and the traces
+        # Update Eligibility Traces
+        self.traces *= self.gamma * self.lambda_
+        self.traces[action] = np.maximum(self.traces[action], s_feats)#self.traces[action] += s_feats
+
+   
+        # Update Weights
         self.weights += self.alpha * delta * self.traces
+
         
         
     def update_alpha_epsilon(self): # do not touch
