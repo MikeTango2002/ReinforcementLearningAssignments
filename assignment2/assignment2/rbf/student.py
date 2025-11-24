@@ -50,8 +50,8 @@ class RBFFeatureEncoder:
         ##################
 
         self.samplers = []
-        gammas = [0.2, 0.5, 1.0, 2.0] 
-        n_components_per_gamma = 500
+        gammas = [0.2, 0.5, 1.0] 
+        n_components_per_gamma = 50
         
         for g in gammas:
             sampler = RBFSampler(n_components=n_components_per_gamma, gamma=g, random_state=1)
