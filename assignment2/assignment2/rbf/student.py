@@ -34,7 +34,7 @@ class RBFFeatureEncoder:
         # It needs as input some data to compute the mean and variance of each feature.
         # The shape of the input should be (n_samples, n_features)
         # Each sample has shape (2,) for MountainCar, and np.array(list_of_arrays) automatically stacks them correctly
-        observation_examples = np.array([env.observation_space.sample() for i in range(2000)])
+        observation_examples = np.array([env.observation_space.sample() for i in range(5000)])
 
         self.scaler = StandardScaler()
 
@@ -51,7 +51,7 @@ class RBFFeatureEncoder:
 
         self.samplers = []
         gammas = [0.2, 0.5, 1.0, 2.0] 
-        n_components_per_gamma = 50
+        n_components_per_gamma = 500
         
         for g in gammas:
             sampler = RBFSampler(n_components=n_components_per_gamma, gamma=g, random_state=1)
@@ -88,12 +88,12 @@ class RBFFeatureEncoder:
         return self._size 
 
 class TDLambda_LVFA:
-    def __init__(self, env, feature_encoder_cls=RBFFeatureEncoder, alpha=0.01, alpha_decay=0.999, 
-                 gamma=0.9999, epsilon=0.2, epsilon_decay=0.9, final_epsilon=0.01, lambda_=0.9): # modify if you want (e.g. for forward view)
+    def __init__(self, env, feature_encoder_cls=RBFFeatureEncoder, alpha=0.01, alpha_decay=1.0, 
+                 gamma=0.9999, epsilon=0.3, epsilon_decay=0.995, final_epsilon=0.2, lambda_=0.9): # modify if you want (e.g. for forward view)
         self.env = env
         self.feature_encoder = feature_encoder_cls(env)
         self.shape = (self.env.action_space.n, self.feature_encoder.size)
-        self.weights = np.zeros(self.shape) #np.random.random(self.shape)
+        self.weights = np.random.random(self.shape)
         self.traces = np.zeros(self.shape)
         self.alpha = alpha
         self.alpha_decay = alpha_decay
@@ -127,11 +127,10 @@ class TDLambda_LVFA:
 
         # Update Eligibility Traces
         self.traces *= self.gamma * self.lambda_
-        self.traces[action] = np.maximum(self.traces[action], s_feats)#self.traces[action] += s_feats
-
+        self.traces[action] += s_feats
    
         # Update Weights
-        self.weights += self.alpha * delta * self.traces
+        self.weights[action] += self.alpha * delta * self.traces[action]
 
         
         
