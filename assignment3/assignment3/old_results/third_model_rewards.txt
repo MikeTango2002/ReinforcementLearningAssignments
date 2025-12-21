@@ -1,0 +1,208 @@
+Starting Training: 292 updates expected.
+Update 1/292 | True Score: -56.97 | Optim Score: -98.64 | Std: 0.9844
+    >>> NEW RECORD! Saving best_model.pt (Score: -56.97)
+Update 2/292 | True Score: -59.81 | Optim Score: -98.24 | Std: 0.9844
+Update 3/292 | True Score: -55.13 | Optim Score: -97.79 | Std: 0.9793
+    >>> NEW RECORD! Saving best_model.pt (Score: -55.13)
+Update 4/292 | True Score: -51.79 | Optim Score: -97.30 | Std: 0.9936
+    >>> NEW RECORD! Saving best_model.pt (Score: -51.79)
+Update 5/292 | True Score: -53.79 | Optim Score: -99.20 | Std: 0.9856
+Update 6/292 | True Score: -54.48 | Optim Score: -98.05 | Std: 0.9954
+Update 7/292 | True Score: -50.31 | Optim Score: -97.81 | Std: 0.9913
+    >>> NEW RECORD! Saving best_model.pt (Score: -50.31)
+Update 8/292 | True Score: -59.88 | Optim Score: -100.01 | Std: 0.9918
+Update 9/292 | True Score: -59.13 | Optim Score: -99.03 | Std: 0.9735
+Update 10/292 | True Score: -68.17 | Optim Score: -101.08 | Std: 0.9686
+Update 11/292 | True Score: -46.92 | Optim Score: -77.99 | Std: 0.9621
+    >>> NEW RECORD! Saving best_model.pt (Score: -46.92)
+Update 12/292 | True Score: -68.77 | Optim Score: -100.72 | Std: 0.9476
+Update 13/292 | True Score: -68.76 | Optim Score: -100.84 | Std: 0.9439
+Update 14/292 | True Score: -71.63 | Optim Score: -100.75 | Std: 0.9381
+Update 15/292 | True Score: -72.99 | Optim Score: -102.86 | Std: 0.9240
+Update 16/292 | True Score: -78.17 | Optim Score: -103.64 | Std: 0.9249
+Update 17/292 | True Score: -74.45 | Optim Score: -103.33 | Std: 0.9538
+Update 18/292 | True Score: -76.88 | Optim Score: -103.80 | Std: 0.9419
+Update 19/292 | True Score: -77.88 | Optim Score: -102.81 | Std: 0.9414
+Update 20/292 | True Score: -75.17 | Optim Score: -102.32 | Std: 0.9318
+Update 21/292 | True Score: -60.04 | Optim Score: -81.87 | Std: 0.9337
+Update 22/292 | True Score: -78.19 | Optim Score: -102.13 | Std: 0.9246
+Update 23/292 | True Score: -74.20 | Optim Score: -101.24 | Std: 0.9213
+Update 24/292 | True Score: -75.08 | Optim Score: -101.84 | Std: 0.9094
+Update 25/292 | True Score: -70.85 | Optim Score: -100.16 | Std: 0.9017
+Update 26/292 | True Score: -38.28 | Optim Score: -89.86 | Std: 0.8988
+    >>> NEW RECORD! Saving best_model.pt (Score: -38.28)
+Update 27/292 | True Score: -63.55 | Optim Score: -98.59 | Std: 0.8980
+Update 28/292 | True Score: -22.19 | Optim Score: -84.80 | Std: 0.8916
+    >>> NEW RECORD! Saving best_model.pt (Score: -22.19)
+Update 29/292 | True Score: -35.51 | Optim Score: -88.91 | Std: 0.8982
+Update 30/292 | True Score: -51.21 | Optim Score: -95.42 | Std: 0.9097
+Update 31/292 | True Score: -72.06 | Optim Score: -101.92 | Std: 0.9041
+Update 32/292 | True Score: -34.81 | Optim Score: -73.90 | Std: 0.8935
+Update 33/292 | True Score: -76.99 | Optim Score: -102.59 | Std: 0.8958
+Update 34/292 | True Score: -72.31 | Optim Score: -101.01 | Std: 0.8928
+Update 35/292 | True Score: -75.47 | Optim Score: -101.77 | Std: 0.8885
+Update 36/292 | True Score: -79.23 | Optim Score: -102.25 | Std: 0.8788
+Update 37/292 | True Score: -73.18 | Optim Score: -100.15 | Std: 0.8836
+Update 38/292 | True Score: -71.43 | Optim Score: -99.97 | Std: 0.8856
+Update 39/292 | True Score: -75.72 | Optim Score: -101.96 | Std: 0.8754
+Update 40/292 | True Score: -78.49 | Optim Score: -102.40 | Std: 0.8775
+Update 41/292 | True Score: -67.56 | Optim Score: -100.07 | Std: 0.8718
+Update 42/292 | True Score: -61.40 | Optim Score: -80.48 | Std: 0.8646
+Update 43/292 | True Score: -74.36 | Optim Score: -100.07 | Std: 0.8703
+Update 44/292 | True Score: -77.36 | Optim Score: -100.35 | Std: 0.8704
+Update 45/292 | True Score: -60.02 | Optim Score: -96.64 | Std: 0.8606
+Update 46/292 | True Score: -7.06 | Optim Score: -78.67 | Std: 0.8555
+    >>> NEW RECORD! Saving best_model.pt (Score: -7.06)
+Update 47/292 | True Score: -69.73 | Optim Score: -100.45 | Std: 0.8433
+Update 48/292 | True Score: -72.85 | Optim Score: -100.58 | Std: 0.8263
+Update 49/292 | True Score: -25.24 | Optim Score: -83.02 | Std: 0.8251
+Update 50/292 | True Score: -26.04 | Optim Score: -85.08 | Std: 0.8282
+Update 51/292 | True Score: -28.74 | Optim Score: -87.78 | Std: 0.8220
+Update 52/292 | True Score: -42.03 | Optim Score: -89.90 | Std: 0.8218
+Update 53/292 | True Score: -41.35 | Optim Score: -74.48 | Std: 0.8158
+Update 54/292 | True Score: -0.38 | Optim Score: -75.63 | Std: 0.8120
+    >>> NEW RECORD! Saving best_model.pt (Score: -0.38)
+Update 55/292 | True Score: -45.69 | Optim Score: -92.05 | Std: 0.7910
+Update 56/292 | True Score: -9.02 | Optim Score: -79.00 | Std: 0.7874
+Update 57/292 | True Score: 7.72 | Optim Score: -70.68 | Std: 0.7885
+    >>> NEW RECORD! Saving best_model.pt (Score: 7.72)
+Update 58/292 | True Score: 30.39 | Optim Score: -69.97 | Std: 0.7864
+    >>> NEW RECORD! Saving best_model.pt (Score: 30.39)
+Update 59/292 | True Score: 26.80 | Optim Score: -70.28 | Std: 0.7757
+Update 60/292 | True Score: 95.90 | Optim Score: -31.63 | Std: 0.7583
+    >>> NEW RECORD! Saving best_model.pt (Score: 95.90)
+Update 61/292 | True Score: 96.15 | Optim Score: -49.90 | Std: 0.7463
+    >>> NEW RECORD! Saving best_model.pt (Score: 96.15)
+Update 62/292 | True Score: 154.71 | Optim Score: -33.29 | Std: 0.7338
+    >>> NEW RECORD! Saving best_model.pt (Score: 154.71)
+Update 63/292 | True Score: 118.92 | Optim Score: -43.07 | Std: 0.7367
+Update 64/292 | True Score: 136.84 | Optim Score: -36.69 | Std: 0.7165
+Update 65/292 | True Score: 132.49 | Optim Score: -37.21 | Std: 0.7053
+Update 66/292 | True Score: 129.34 | Optim Score: -18.92 | Std: 0.7039
+Update 67/292 | True Score: 73.21 | Optim Score: -52.71 | Std: 0.7069
+Update 68/292 | True Score: 260.24 | Optim Score: 0.95 | Std: 0.6908
+    >>> NEW RECORD! Saving best_model.pt (Score: 260.24)
+Update 69/292 | True Score: 179.16 | Optim Score: -21.31 | Std: 0.6787
+Update 70/292 | True Score: 275.53 | Optim Score: -1.00 | Std: 0.6660
+    >>> NEW RECORD! Saving best_model.pt (Score: 275.53)
+Update 71/292 | True Score: 172.57 | Optim Score: -33.43 | Std: 0.6719
+Update 72/292 | True Score: 437.93 | Optim Score: 52.08 | Std: 0.6722
+    >>> NEW RECORD! Saving best_model.pt (Score: 437.93)
+Update 73/292 | True Score: 253.73 | Optim Score: 22.42 | Std: 0.6644
+Update 74/292 | True Score: 315.67 | Optim Score: 13.33 | Std: 0.6603
+Update 75/292 | True Score: 414.69 | Optim Score: 52.31 | Std: 0.6562
+Update 76/292 | True Score: 357.69 | Optim Score: 36.00 | Std: 0.6409
+Update 77/292 | True Score: 269.31 | Optim Score: 13.56 | Std: 0.6415
+Update 78/292 | True Score: 249.83 | Optim Score: 0.47 | Std: 0.6361
+Update 79/292 | True Score: 478.86 | Optim Score: 69.69 | Std: 0.6338
+    >>> NEW RECORD! Saving best_model.pt (Score: 478.86)
+Update 80/292 | True Score: 472.05 | Optim Score: 58.30 | Std: 0.6285
+Update 81/292 | True Score: 264.89 | Optim Score: 18.18 | Std: 0.6185
+Update 82/292 | True Score: 232.35 | Optim Score: -11.95 | Std: 0.6115
+Update 83/292 | True Score: 315.92 | Optim Score: 17.60 | Std: 0.6023
+Update 84/292 | True Score: 383.32 | Optim Score: 43.09 | Std: 0.5958
+Update 85/292 | True Score: 308.41 | Optim Score: 21.17 | Std: 0.5953
+Update 86/292 | True Score: 345.82 | Optim Score: 33.93 | Std: 0.5919
+Update 87/292 | True Score: 442.64 | Optim Score: 51.46 | Std: 0.5851
+Update 88/292 | True Score: 391.40 | Optim Score: 37.94 | Std: 0.5892
+Update 89/292 | True Score: 558.45 | Optim Score: 86.07 | Std: 0.5996
+    >>> NEW RECORD! Saving best_model.pt (Score: 558.45)
+Update 90/292 | True Score: 354.03 | Optim Score: 29.28 | Std: 0.5951
+Update 91/292 | True Score: 275.75 | Optim Score: 6.65 | Std: 0.5829
+Update 92/292 | True Score: 330.10 | Optim Score: 31.27 | Std: 0.5818
+Update 93/292 | True Score: 303.20 | Optim Score: 24.92 | Std: 0.5933
+Update 94/292 | True Score: 454.29 | Optim Score: 62.95 | Std: 0.5831
+Update 95/292 | True Score: 385.38 | Optim Score: 57.08 | Std: 0.5823
+Update 96/292 | True Score: 394.31 | Optim Score: 44.72 | Std: 0.5786
+Update 97/292 | True Score: 582.32 | Optim Score: 99.23 | Std: 0.5946
+    >>> NEW RECORD! Saving best_model.pt (Score: 582.32)
+Update 98/292 | True Score: 532.89 | Optim Score: 87.24 | Std: 0.6039
+Update 99/292 | True Score: 490.28 | Optim Score: 76.82 | Std: 0.6038
+Update 100/292 | True Score: 489.04 | Optim Score: 69.46 | Std: 0.6053
+Update 101/292 | True Score: 366.52 | Optim Score: 33.92 | Std: 0.5981
+Update 102/292 | True Score: 424.39 | Optim Score: 59.85 | Std: 0.5848
+Update 103/292 | True Score: 638.84 | Optim Score: 132.72 | Std: 0.5822
+    >>> NEW RECORD! Saving best_model.pt (Score: 638.84)
+Update 104/292 | True Score: 295.05 | Optim Score: 20.00 | Std: 0.5811
+Update 105/292 | True Score: 280.84 | Optim Score: 11.68 | Std: 0.5786
+Update 106/292 | True Score: 400.41 | Optim Score: 54.70 | Std: 0.5789
+Update 107/292 | True Score: 508.93 | Optim Score: 83.21 | Std: 0.5860
+Update 108/292 | True Score: 507.17 | Optim Score: 77.68 | Std: 0.5837
+Update 109/292 | True Score: 442.62 | Optim Score: 54.28 | Std: 0.5801
+Update 110/292 | True Score: 482.21 | Optim Score: 72.79 | Std: 0.5895
+Update 111/292 | True Score: 395.81 | Optim Score: 48.82 | Std: 0.5866
+Update 112/292 | True Score: 539.50 | Optim Score: 86.60 | Std: 0.5841
+Update 113/292 | True Score: 526.63 | Optim Score: 89.55 | Std: 0.5817
+Update 114/292 | True Score: 642.87 | Optim Score: 119.84 | Std: 0.5745
+    >>> NEW RECORD! Saving best_model.pt (Score: 642.87)
+Update 115/292 | True Score: 453.68 | Optim Score: 57.38 | Std: 0.5864
+Update 116/292 | True Score: 435.52 | Optim Score: 71.04 | Std: 0.5973
+Update 117/292 | True Score: 609.72 | Optim Score: 107.02 | Std: 0.6039
+Update 118/292 | True Score: 584.23 | Optim Score: 121.63 | Std: 0.6220
+Update 119/292 | True Score: 707.64 | Optim Score: 132.23 | Std: 0.6084
+    >>> NEW RECORD! Saving best_model.pt (Score: 707.64)
+Update 120/292 | True Score: 757.66 | Optim Score: 170.46 | Std: 0.6184
+    >>> NEW RECORD! Saving best_model.pt (Score: 757.66)
+Update 121/292 | True Score: 670.58 | Optim Score: 131.82 | Std: 0.6180
+Update 122/292 | True Score: 529.19 | Optim Score: 98.29 | Std: 0.6155
+Update 123/292 | True Score: 568.71 | Optim Score: 101.29 | Std: 0.6113
+Update 124/292 | True Score: 606.74 | Optim Score: 97.75 | Std: 0.6025
+Update 125/292 | True Score: 519.66 | Optim Score: 80.57 | Std: 0.5965
+Update 126/292 | True Score: 573.71 | Optim Score: 109.63 | Std: 0.5859
+Update 127/292 | True Score: 601.81 | Optim Score: 119.89 | Std: 0.5858
+Update 128/292 | True Score: 715.11 | Optim Score: 145.89 | Std: 0.5816
+Update 129/292 | True Score: 373.16 | Optim Score: 39.89 | Std: 0.5751
+Update 130/292 | True Score: 481.54 | Optim Score: 77.07 | Std: 0.5745
+Update 131/292 | True Score: 403.45 | Optim Score: 45.37 | Std: 0.5793
+Update 132/292 | True Score: 316.65 | Optim Score: 16.11 | Std: 0.5769
+Update 133/292 | True Score: 328.47 | Optim Score: 23.73 | Std: 0.5695
+Update 134/292 | True Score: 424.12 | Optim Score: 55.65 | Std: 0.5688
+Update 135/292 | True Score: 396.19 | Optim Score: 54.35 | Std: 0.5638
+Update 136/292 | True Score: 389.02 | Optim Score: 33.76 | Std: 0.5653
+Update 137/292 | True Score: 448.08 | Optim Score: 78.52 | Std: 0.5602
+Update 138/292 | True Score: 516.24 | Optim Score: 79.39 | Std: 0.5567
+Update 139/292 | True Score: 533.15 | Optim Score: 97.89 | Std: 0.5662
+Update 140/292 | True Score: 475.85 | Optim Score: 74.17 | Std: 0.5665
+Update 141/292 | True Score: 689.28 | Optim Score: 135.51 | Std: 0.5651
+Update 142/292 | True Score: 318.27 | Optim Score: 18.01 | Std: 0.5687
+Update 143/292 | True Score: 649.78 | Optim Score: 120.39 | Std: 0.5651
+Update 144/292 | True Score: 521.63 | Optim Score: 93.04 | Std: 0.5568
+Update 145/292 | True Score: 519.94 | Optim Score: 97.38 | Std: 0.5596
+Update 146/292 | True Score: 622.17 | Optim Score: 127.14 | Std: 0.5537
+Update 147/292 | True Score: 429.67 | Optim Score: 58.17 | Std: 0.5504
+Update 148/292 | True Score: 341.33 | Optim Score: 31.24 | Std: 0.5483
+Update 149/292 | True Score: 635.43 | Optim Score: 125.08 | Std: 0.5451
+Update 150/292 | True Score: 552.29 | Optim Score: 95.62 | Std: 0.5412
+Update 151/292 | True Score: 428.77 | Optim Score: 73.68 | Std: 0.5446
+Update 152/292 | True Score: 506.89 | Optim Score: 98.50 | Std: 0.5429
+Update 153/292 | True Score: 527.02 | Optim Score: 79.47 | Std: 0.5401
+Update 154/292 | True Score: 329.42 | Optim Score: 30.27 | Std: 0.5361
+Update 155/292 | True Score: 741.14 | Optim Score: 164.05 | Std: 0.5340
+Update 156/292 | True Score: 402.86 | Optim Score: 49.72 | Std: 0.5264
+Update 157/292 | True Score: 330.01 | Optim Score: 22.33 | Std: 0.5285
+Update 158/292 | True Score: 470.11 | Optim Score: 82.67 | Std: 0.5248
+Update 159/292 | True Score: 304.32 | Optim Score: 33.67 | Std: 0.5264
+Update 160/292 | True Score: 548.27 | Optim Score: 103.16 | Std: 0.5281
+Update 161/292 | True Score: 433.95 | Optim Score: 64.35 | Std: 0.5275
+Update 162/292 | True Score: 244.52 | Optim Score: 6.02 | Std: 0.5285
+Update 163/292 | True Score: 259.84 | Optim Score: 24.50 | Std: 0.5325
+Update 164/292 | True Score: 382.56 | Optim Score: 39.59 | Std: 0.5394
+Update 165/292 | True Score: 577.76 | Optim Score: 94.85 | Std: 0.5408
+Update 166/292 | True Score: 401.08 | Optim Score: 42.86 | Std: 0.5356
+Update 167/292 | True Score: 238.71 | Optim Score: 1.31 | Std: 0.5322
+Update 168/292 | True Score: 288.91 | Optim Score: 22.13 | Std: 0.5327
+Update 169/292 | True Score: 494.99 | Optim Score: 108.54 | Std: 0.5287
+Update 170/292 | True Score: 344.88 | Optim Score: 47.05 | Std: 0.5215
+Early Stopping triggered! No improvement for 50 updates.
+Best Score was: 757.66
+Mean Reward: 626.0273972602573
+
+
+
+
+# ==============================================================================
+# 10 episodes, 10 epidodes, 30 episodes
+# ==============================================================================
+#First model: mean reward ~784  - ~824 - ~766
+#Second model: mean reward ~557 - ~551 - ~606
+#Third model: mean reward ~798 - ~654 - ~615
